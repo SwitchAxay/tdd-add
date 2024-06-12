@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+
+.number-sum {
+  margin-top: 100px;
+  padding: 0 50px;
+}
+.number-sum-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+input[type=text] {
+  width: 250px;
+  height: 40px;
+  padding: 5px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.custom-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 260px;
+  height: 40px;
+  width: 90%;
+  border-radius: 3px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: #3971c1;
+  border: solid 2px #3971c1;
+  background-color: transparent;
+}
+.custom-button:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #3971c1;
+}
+.number-sum-btn {
+  margin-top: 15px;
+  margin-left: 80px;
+}
+
