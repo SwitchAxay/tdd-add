@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
+import handleNumberSum from './handleNumberSum';
 
 const NumberSum = () => {
   const [numberString, setNumberString] = useState('');
   const [totalValue, setTotalValue] = useState('');
-
-  const handleNumberSum = () => {
-
-  };
 
   return (
     <div className="number-sum">
@@ -22,7 +19,7 @@ const NumberSum = () => {
         </div>
       </div>
       <div className="number-sum-btn">
-        <button type="button" className="custom-button" onClick={handleNumberSum}>
+        <button type="button" className="custom-button" onClick={() => handleNumberSum(numberString)}>
           Submit
         </button>
       </div>
