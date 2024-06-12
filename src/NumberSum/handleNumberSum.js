@@ -1,9 +1,16 @@
 const totalSum = (numberArr) => {
-  let sum = 0;
-  for (let i = 0; i < numberArr.length; i += 1) {
-    sum += Number((numberArr[i] || 0));
-  }
-  return sum;
+    let sum = 0;
+    let negitiveNumber = '';
+    for (let i = 0; i < numberArr.length; i += 1) {
+      if (Number((numberArr[i] || 0)) < -1) {
+        negitiveNumber += numberArr[i];
+      }
+      sum += Number((numberArr[i] || 0));
+    }
+    if (negitiveNumber) {
+      throw `negative numbers not allowed ${negitiveNumber}`;
+    }
+    return sum;
 };
 
 const updateArray = (currentArr, currentDelimiter) => {
@@ -22,7 +29,7 @@ export const handleNumberSum = (value = '') => {
     const indexOfDelimiterEnd = value.indexOf('\n');
     const newString = value.substring(indexOfDelimiterEnd + 1);
     let numberArr = [newString];
-    
+
     for (let i = 0; i < delimiterType.length; i += 1) {
       numberArr = updateArray(numberArr, delimiterType[i]);
     }

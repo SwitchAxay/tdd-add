@@ -26,4 +26,14 @@ describe("Number string sum test case", () => {
     const { result } = renderHook(() => handleNumberSum("//;\n8;6"));
     expect(result.current).toEqual(14);
   });
+
+  test('Function should not accept negitive number', async () => {
+    try {
+      expect(() => {
+        renderHook(() => (handleNumberSum("8,-6, -4")))
+      }).toThrow(Error("negative numbers not allowed -6 -4"))
+    } catch (err) {
+      return false
+    }
+  });
 });
