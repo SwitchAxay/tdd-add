@@ -16,4 +16,14 @@ describe("Number string sum test case", () => {
     const { result } = renderHook(() => handleNumberSum("8,6"));
     expect(result.current).toEqual(14);
   });
+
+  test('Function should accept new line command in between numbers', async () => {
+    const { result } = renderHook(() => handleNumberSum("8\n2,6"));
+    expect(result.current).toEqual(16);
+  });
+
+  test('Function should accept delimiter', async () => {
+    const { result } = renderHook(() => handleNumberSum("//;\n8;6"));
+    expect(result.current).toEqual(14);
+  });
 });

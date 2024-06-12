@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import handleNumberSum from './handleNumberSum';
 
 const NumberSum = () => {
-  const [numberString, setNumberString] = useState('');
+  const [numberString, setNumberString] = useState("//;\n8;6");
   const [totalValue, setTotalValue] = useState('');
 
   return (
